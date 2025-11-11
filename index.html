@@ -1,11 +1,215 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Colorful Math Operations - Working Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: left;
+      margin: 0;
+      padding: 20px;
+      background: #f3f6f8;
+    }
+    .section {
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .section h3 { margin: 0 0 6px 0; font-size: 16px; }
+    .result {
+      margin-top: 8px;
+      font-weight: 600;
+    }
+    button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 12px;
+      border: none;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.9; }
+    #s1 { background: lightblue; }
+    #s2 { background: lightgreen; }
+    #s3 { background: pink; }
+    #s4 { background: lightcoral; }
+  </style>
 </head>
 <body>
-    
+
+  <div id="s1" class="section">
+    <h3>Mango</h3>
+    <p class="desc">Add two numbers</p>
+    <p id="add" class="result">Sum: —</p>
+    <button id="btnAdd" type="button">Click to Add</button>
+  </div>
+
+  <div id="s2" class="section">
+    <h3>Apple</h3>
+    <p class="desc">Subtract two numbers</p>
+    <p id="sub" class="result">Difference: —</p>
+    <button id="btnSub" type="button">Click to Subtract</button>
+  </div>
+
+  <div id="s3" class="section">
+    <h3>Banana</h3>
+    <p class="desc">Multiply two numbers</p>
+    <p id="mul" class="result">Product: —</p>
+    <button id="btnMul" type="button">Click to Multiply</button>
+  </div>
+
+  <div id="s4" class="section">
+    <h3>Grapes</h3>
+    <p class="desc">Divide two numbers</p>
+    <p id="div" class="result">Quotient: —</p>
+    <button id="btnDiv" type="button">Click to Divide</button>
+  </div>
+
+  <script>
+    function addition() {
+      const a = 12;
+      const b = 8;
+      return a + b;
+    }
+
+    function subtraction() {
+      const a = 25;
+      const b = 9;
+      return a - b;
+    }
+
+    function multiplication() {
+      const a = 6;
+      const b = 11;
+      return a * b;
+    }
+
+    function division() {
+      const a = 45;
+      const b = 9;
+      return b === 0 ? 'Error (divide by 0)' : a / b;
+    }
+
+    document.getElementById('btnAdd').addEventListener('click', function () {
+      document.getElementById('add').innerText = 'Sum: ' + addition();
+    });
+
+    document.getElementById('btnSub').addEventListener('click', function () {
+      document.getElementById('sub').innerText = 'Difference: ' + subtraction();
+    });
+
+    document.getElementById('btnMul').addEventListener('click', function () {
+      document.getElementById('mul').innerText = 'Product: ' + multiplication();
+    });
+
+    document.getElementById('btnDiv').addEventListener('click', function () {
+      document.getElementById('div').innerText = 'Quotient: ' + division();
+    });
+  </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madrid or Barcelona?</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #222;
+    }
+
+    input {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    #teamLogo {
+      margin-top: 30px;
+      width: 180px;
+      height: auto;
+      display: none;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Are you Madrid or Barcelona?</h1>
+  <div>
+    <input type="text" id="teamInput" placeholder="Enter team name">
+    <button onclick="checkTeam()">Check Team</button>
+  </div>
+  <p id="message">Please enter 'Madrid' or 'Barcelona'.</p>
+  <img id="teamLogo" alt="Team Logo">
+
+  <script>
+    function checkTeam() {
+      const input = document.getElementById("teamInput").value.trim().toLowerCase();
+      const message = document.getElementById("message");
+      const logo = document.getElementById("teamLogo");
+
+      if (input === "madrid" || input === "real madrid") {
+        message.textContent = "You are a Real Madrid fan! ⚽👑";
+        logo.src = "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg";
+        logo.style.display = "block";
+      } 
+      else if (input === "barcelona" || input === "fc barcelona") {
+        message.textContent = "You are a Barcelona fan! 💙❤️";
+        logo.src = "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg";
+        logo.style.display = "block";
+      } 
+      else {
+        message.textContent = "Please enter 'Madrid' or 'Barcelona'.";
+        logo.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>
