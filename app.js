@@ -61,23 +61,3 @@
 //   let c = a / b;
 //   document.getElementById("div").innerText = "Quotient: " + c;
 // }
-
-// function ShowTeam() {
-//   let input = document.getElementById("ethnicity").value.trim().toLowerCase();
-//   let img = document.getElementById("displayImage");
-//   let msg = document.getElementById("message");
-
-//   if (input === "Madrid") {
-//     img.src =
-//       "https://thumbs.dreamstime.com/b/fc-real-madrid-la-liga-team-81049265.jpg"; // Real Madrid image
-//     img.style.display = "block";
-//     msg.innerText = "You support Real Madrid ⚪👑";
-//   } else if (input === "non-newari") {
-//     img.src = "images/fcbarcelona.jpg"; // FC Barcelona image
-//     img.style.display = "block";
-//     msg.innerText = "You support FC Barcelona 🔵🔴";
-//   } else {
-//     msg.innerText = "Please enter 'Newari' or 'Non-Newari'.";
-//     img.style.display = "none";
-//   }
-// }
