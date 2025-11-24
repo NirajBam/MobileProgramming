@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HamroPorter</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
-      <div class="left-logo">
-        <img src="logo.png" class="logo" alt="App Logo" />
-        <h2>HamroPorter</h2>
-      </div>
 
-      <ul class="nav-links">
-        <li><a href="#">Earn with Pathao</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">More</a></li>
-        <li><a href="#">ENG ⌄</a></li>
-      </ul>
+        <!-- LEFT SIDE: LOGO + NAME -->
+        <div class="left-logo">
+            <img src="logo.png" class="logo" alt="App Logo">
+            <h2>HamroPorter</h2>
+        </div>
 
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <!-- RIGHT SIDE MENU -->
+        <ul class="nav-links">
+            <li><a href="#">Earn with Pathao</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">More</a></li>
+            <li><a href="#">ENG </a></li>
+        </ul>
+
+        <!-- HAMBURGER FOR MOBILE -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
     </nav>
 
+    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#">Earn with Pathao</a>
-      <a href="#">Services</a>
-      <a href="#">Help</a>
-      <a href="#">Blog</a>
-      <a href="#">More</a>
-      <a href="#">ENG</a>
+        <a href="#">Earn with Pathao</a>
+        <a href="#">Services</a>
+        <a href="#">Help</a>
+        <a href="#">Blog</a>
+        <a href="#">More</a>
+        <a href="#">ENG</a>
     </div>
 
+
+    <!-- HERO SECTION -->
     <header class="hero">
-      <h1>Fast Delivery With Bike, Car & Truck</h1>
-      <p>
-        Join our platform and deliver parcels, documents, and goods quickly earn
-        more with every trip!
-      </p>
+        <h1>Earn with Your Bike, Car or Cycle</h1>
+        <p>Become a captain, rider or foodman on the highest earning platform!</p>
     </header>
 
     <script>
-      function toggleMenu() {
-        document.getElementById("mobileMenu").classList.toggle("show");
-      }
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("show");
+        }
     </script>
-  </body>
+
+</body>
 </html>
